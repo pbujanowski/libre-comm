@@ -1,0 +1,6 @@
+@baseUrl = http://localhost:5273
+
+# @name index
+GET {{baseUrl}}
+Accept: application/json
+###
