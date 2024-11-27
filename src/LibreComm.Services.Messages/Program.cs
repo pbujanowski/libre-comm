@@ -1,21 +1,16 @@
 using LibreComm.ServiceDefaults;
-using LibreComm.Services.Messages.API.Endpoints.Index;
+using LibreComm.Services.Messages.API;
+using LibreComm.Services.Messages.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.AddInfrastructure();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseInfrastructure();
 
-app.RegisterIndexEndpoint();
+app.UseAPI();
 
 app.Run();

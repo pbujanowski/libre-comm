@@ -10,8 +10,16 @@ using OpenTelemetry.Trace;
 
 namespace LibreComm.ServiceDefaults;
 
+/// <summary>
+/// Service defaults extensions.
+/// </summary>
 public static class Extensions
 {
+    /// <summary>
+    /// Adds service defaults.
+    /// </summary>
+    /// <param name="builder">Host application builder.</param>
+    /// <returns></returns>
     public static IHostApplicationBuilder AddServiceDefaults(this IHostApplicationBuilder builder)
     {
         builder.ConfigureOpenTelemetry();
@@ -29,6 +37,11 @@ public static class Extensions
         return builder;
     }
 
+    /// <summary>
+    /// Configures OpenTelemetry.
+    /// </summary>
+    /// <param name="builder">Host application builder.</param>
+    /// <returns>Host application builder.</returns>
     public static IHostApplicationBuilder ConfigureOpenTelemetry(
         this IHostApplicationBuilder builder
     )
@@ -58,6 +71,11 @@ public static class Extensions
         return builder;
     }
 
+    /// <summary>
+    /// Adds OpenTelemetry exporters.
+    /// </summary>
+    /// <param name="builder">Host application builder.</param>
+    /// <returns></returns>
     private static IHostApplicationBuilder AddOpenTelemetryExporters(
         this IHostApplicationBuilder builder
     )
@@ -74,6 +92,11 @@ public static class Extensions
         return builder;
     }
 
+    /// <summary>
+    /// Adds default health checks.
+    /// </summary>
+    /// <param name="builder">Host application builder.</param>
+    /// <returns>Host application builder.</returns>
     public static IHostApplicationBuilder AddDefaultHealthChecks(
         this IHostApplicationBuilder builder
     )
@@ -85,6 +108,11 @@ public static class Extensions
         return builder;
     }
 
+    /// <summary>
+    /// Maps default endpoints.
+    /// </summary>
+    /// <param name="app">Web application.</param>
+    /// <returns>Web application.</returns>
     public static WebApplication MapDefaultEndpoints(this WebApplication app)
     {
         if (app.Environment.IsDevelopment())

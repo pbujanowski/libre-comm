@@ -1,5 +1,29 @@
 @baseUrl = http://localhost:5273
 
+# @name create-message
+POST {{baseUrl}}/create-message
+Content-Type: application/json
+
+{
+    "message":
+    {
+        "senderId": "{{$guid}}",
+        "recipientId": "{{$guid}}",
+        "content": "Test content: {{$timestamp}}"
+    }
+}
+###
+
+# @name delete-message
+@sender-id = {{$guid}}
+DELETE {{baseUrl}}/delete-message/{{sender-id}}
+###
+
+# @name get-messages
+@sender-id = {{$guid}}
+GET {{baseUrl}}/get-messages/{{sender-id}}
+###
+
 # @name index
 GET {{baseUrl}}
 Accept: application/json
