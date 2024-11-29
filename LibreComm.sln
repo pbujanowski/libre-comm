@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreComm.Services.Common",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreComm.Services.Messages", "src\LibreComm.Services.Messages\LibreComm.Services.Messages.csproj", "{7C1DE820-541B-4522-8640-F8CA3DF0202B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B174656A-9E1D-4002-86C7-AFDB617417A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreComm.IntegrationTests", "test\LibreComm.IntegrationTests\LibreComm.IntegrationTests.csproj", "{4D76064A-6955-4C4A-90C3-3AEECE5EBA2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{7C1DE820-541B-4522-8640-F8CA3DF0202B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C1DE820-541B-4522-8640-F8CA3DF0202B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C1DE820-541B-4522-8640-F8CA3DF0202B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D76064A-6955-4C4A-90C3-3AEECE5EBA2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D76064A-6955-4C4A-90C3-3AEECE5EBA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D76064A-6955-4C4A-90C3-3AEECE5EBA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D76064A-6955-4C4A-90C3-3AEECE5EBA2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +52,6 @@ Global
 		{9383E1A8-B8B9-4492-8C78-F355CDB0976B} = {15C2B4B4-400B-4A5D-B28A-8B8DA75E6ABE}
 		{A5C81EE7-CD79-4D8F-83F3-A541A97613CE} = {15C2B4B4-400B-4A5D-B28A-8B8DA75E6ABE}
 		{7C1DE820-541B-4522-8640-F8CA3DF0202B} = {15C2B4B4-400B-4A5D-B28A-8B8DA75E6ABE}
+		{4D76064A-6955-4C4A-90C3-3AEECE5EBA2C} = {B174656A-9E1D-4002-86C7-AFDB617417A1}
 	EndGlobalSection
 EndGlobal
